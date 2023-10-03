@@ -29,6 +29,8 @@ print(settings.DATABASE_PASSWORD)
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+# provide the list of all public URL that our API's can communicate each other 
 origins = ["https://www.google.com"] 
 app.add_middleware(
     CORSMiddleware,
